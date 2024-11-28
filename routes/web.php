@@ -18,7 +18,6 @@ Route::put('/users/{user}', [UserController::class, 'update'])->name('users.upda
 Route::put('/users/{user}/deactivate', [UserController::class, 'deactivate'])->name('users.deactivate');
 
 use App\Http\Controllers\OrderController;
-
 Route::get('/order/search', [OrderController::class, 'search'])->name('order.search');
 Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
 Route::get('/orders/create', [OrderController::class, 'create'])->name('orders.create');
@@ -31,5 +30,5 @@ Route::get('/orders/archived', [OrderController::class, 'archived'])->name('orde
 Route::put('/orders/{order}/restore', [OrderController::class, 'restore'])->name('orders.restore');
 
 Route::get('/test-orders', function () {
-    return view('users.create'); // Adjust the path to your view as needed
+    return view('users.create'); //for testing and directly previewing views
 });
